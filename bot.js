@@ -19,6 +19,8 @@ if (process.env.NODE_ENV === "Heroku") {
     console.log("Bot is live on Local")
 }
 
+
+
 // BOT COMMANDS
 // Command: /start
 bot.onText(/\/start/, async (msg) => {
@@ -30,12 +32,12 @@ bot.onText(/\/start/, async (msg) => {
         1) /start - start Bot
         2) /end - stop Bot
         3) /drug - search for a drug (in Singapore)
-        4) /druginfo - find info on drug*
-        5) /pharmacy - search for a local pharmacy
-        6) /feedback - submit a feedback\n*<b>Please note that the sources are from...</b>
         `        
         , {parse_mode: 'HTML'})
 })
+// 4) /druginfo - find info on drug*
+// 5) /pharmacy - search for a local pharmacy
+// 6) /feedback - submit a feedback\n*<b>Please note that the sources are from...</b>
 
 // Command: /end
 bot.onText(/\/end/, (msg) => {
@@ -51,7 +53,7 @@ bot.onText(/\/end/, (msg) => {
 
 // Command: /drug
 bot.onText(/\/drug/, async (msg) => {
-    // ask user for search type and executes searchTypeName() OR searchTypeDosageForm()
+    // Function: ask user for search type and executes searchTypeName() OR searchTypeDosageForm()
     async function askForSearchType() {
         config = {
             reply_markup: {
@@ -73,7 +75,7 @@ bot.onText(/\/drug/, async (msg) => {
             
         })
     }
-
+    // Function: search for drugs by name/active ingredients
     async function searchTypeName() {
         var result = []
         var drugName = ""
@@ -98,7 +100,8 @@ bot.onText(/\/drug/, async (msg) => {
             })
 
             // add extra option to return to search again
-            options.push([{"text": "Search again", "callback_data": "search"}])
+            options.push([{"text": "Search Again", "callback_data": "search"}])
+            options.push([{"text": "Change Search Type", "callback_data": "change"}])
 
             // add all options as inline_keybuttons
             let config = {
@@ -114,12 +117,15 @@ bot.onText(/\/drug/, async (msg) => {
                 if (callback.data =="search") {
                     bot.removeListener("callback_query")
                     return searchTypeName()
+                } else if (callback.data == "change") {
+                    bot.removeListener("callback_query")
+                    return askForSearchType()
                 } else {
                     let drug = result[callback.data]
                     return bot.sendMessage(
                         msg.chat.id,
                         `
-                        <b>Product Name</b>: ${drug.product_name}\n<b>Route of Administration</b>: ${drug.route_of_administration}\n<b>Classificaion</b>: ${drug.forensic_classification}\n<b>Dosage Form</b>: ${drug.dosage_form}\n
+                        <b>Product Name</b>: ${drug.product_name}\n<b>Strength</b>: ${drug.strength}\n<b>Route of Administration</b>: ${drug.route_of_administration}\n<b>Classificaion</b>: ${drug.forensic_classification}\n<b>Dosage Form</b>: ${drug.dosage_form}\n
                         `,
                         {parse_mode: 'HTML'}
                     )
@@ -128,7 +134,7 @@ bot.onText(/\/drug/, async (msg) => {
             })
         })
     }
-
+    // Function: search for drugs by dosage forms
     async function searchTypeDosageForm() {
         console.log("Search by dosage Form")
         bot.sendMessage(msg.chat.id, "Work in progress")

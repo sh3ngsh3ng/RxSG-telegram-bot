@@ -19,3 +19,9 @@ RxSG Telegram Bot is a telegram bot that provides users with information on drug
     - https://data.gov.sg/dataset/listing-of-registered-therapeutic-products
 2) Drug Interactions (WIP)
     - https://lhncbc.nlm.nih.gov/RxNav/APIs/
+
+
+## Things to do
+1) Add in searching by dosage forms, can refer to reading-csv to get all dosage forms
+2) Explore API for drug interactions
+3) Find data for local pharmacies

@@ -1,4 +1,5 @@
 # RxSG Telegram Bot
+## Introduction
 RxSG Telegram Bot is a telegram bot that provides users with information on drugs.
 
 ## Features
@@ -13,7 +14,7 @@ RxSG Telegram Bot is a telegram bot that provides users with information on drug
 ## Demo
 - Waiting for deployment
 
-## Sources/Data
+## Sources/Data/APIs
 1) List of Registered Therapeutic Products
     - https://data.gov.sg/dataset/listing-of-registered-therapeutic-products
 2) Drug Interactions (WIP)

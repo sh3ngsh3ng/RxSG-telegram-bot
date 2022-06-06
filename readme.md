@@ -25,3 +25,10 @@ RxSG Telegram Bot is a telegram bot that provides users with information on drug
 1) Add in searching by dosage forms, can refer to reading-csv to get all dosage forms
 2) Explore API for drug interactions
 3) Find data for local pharmacies
+
+
+## References
+- https://medium.com/@pere.solaclaver/your-first-telegram-bot-with-node-js-and-hosting-on-heroku-3bfd2bc09475
+- https://github.com/hosein2398/node-telegram-bot-api-tutorial
+- https://github.com/petrussola/covid-country-data-telegram-bot
+

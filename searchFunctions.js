@@ -23,34 +23,6 @@ async function searchDrug(drugName) {
     return result
 }
 
-// async function displaySearchResultsAsOptions(bot) {
-//     bot.on('message', async (msg) => {
-//         let drugName = msg.text
-//         let result = await searchUtils.searchDrug(drugName)
-//         // display results as options
-//         let options = result.map((drugObj) => {
-//             let productName = drugObj.product_name
-//             let productCode = drugObj.atc_code
-//             return [
-//                 {
-//                     "text": productName,
-//                     "callback_data": productCode
-//                 }
-//             ]
-//         })
-
-//         let config = {
-//             reply_markup: {
-//                 "inline_keyboard": options
-//             }
-//         }
-        
-//         bot.sendMessage(msg.chat.id, "Below are the search results! Choose 1.", config)
-
-//         // when option chosen, display information
-//     })
-// }
-
 
 module.exports = {
     loadData,

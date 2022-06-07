@@ -32,3 +32,5 @@ RxSG Telegram Bot is a telegram bot that provides users with information on drug
 - https://github.com/hosein2398/node-telegram-bot-api-tutorial
 - https://github.com/petrussola/covid-country-data-telegram-bot
 
+## Notes
+- How Telegram WebHook works https://docs.google.com/presentation/d/10bOpZhnMuV1Wi3-b6f8HKKDoQ8A9L9698YyeIrzg4lA/edit?usp=sharing

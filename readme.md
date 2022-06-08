@@ -2,6 +2,13 @@
 ## Introduction
 RxSG Telegram Bot is a telegram bot that provides users with information on drugs.
 
+## Hosting
+1) Code for the Telegram Bot is hosted on Heroku
+2) AWS Lambda is used for Telegram's Webhook
+
+### Data flow
+User's application -> Telegram's Bot API -> AWS Lambda -> Heroku
+
 ## Features
 1) Search for the available Therapeutic Products available in Singapore (local context)
     - Search by drug name OR active ingredient

@@ -159,5 +159,3 @@ bot.onText(/\/drug/, async (msg) => {
 
 
 
-
-

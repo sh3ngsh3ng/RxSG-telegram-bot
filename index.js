@@ -20,7 +20,6 @@ const token = process.env.API_KEY
 // Server is either on local or heroku
 if (process.env.NODE_ENV === "Heroku") {
     bot = new TelegramBot(token)
-    console.log(bot)
     bot.setWebHook(process.env.AWS_LAMBDA_FUNCTION_URL)
     console.log("Bot is live on Heroku")
 } else {

@@ -12,7 +12,7 @@ if (process.env.NODE_ENV === "Heroku") {
     bot = new TelegramBot(token)
     console.log(bot)
     bot.setWebHook(process.env.AWS_LAMBDA_FUNCTION_URL)
-    console.log("Bot is live on Heroku")
+    console.log("WebHook set. Bot is live on Heroku")
 } else {
     bot = new TelegramBot(token, {polling: true})
     console.log("Bot is live on Local")

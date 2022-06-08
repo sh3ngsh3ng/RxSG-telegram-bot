@@ -39,7 +39,8 @@ bot.onText(/\/start/, async (msg) => {
         Hello ${msg.from.first_name}!\nI am RxSG! Your friendly <s>druglord</s> Rx Bot!\nI'm here to resolve your drug queries!\nBelow are some of my commands:
         1) /start - start Bot
         2) /end - stop Bot
-        3) /drug - search for a drug (in Singapore)
+        3) /drug - search for a drug (in Singapore)\n
+        This project is still a work in progress. If you have any suggestions or wish to contribute, pls contact @ysh3ng,
         `        
         , {parse_mode: 'HTML'})
 })

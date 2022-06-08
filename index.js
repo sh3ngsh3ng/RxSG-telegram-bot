@@ -189,7 +189,7 @@ async function main() {
 
     app.post(`/from-aws`, (req,res) => {
         console.log("POST request made by aws lambda")
-        console.log(bot)
+        console.log(req.body)
         bot.processUpdate(req.body)
         res.status(200).json({
             message: "Bot received message"

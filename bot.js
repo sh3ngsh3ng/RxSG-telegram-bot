@@ -10,13 +10,14 @@ const token = process.env.API_KEY
 // Server is either on local or heroku
 if (process.env.NODE_ENV === "Heroku") {
     bot = new TelegramBot(token)
-    console.log(bot)
     bot.setWebHook(process.env.AWS_LAMBDA_FUNCTION_URL)
     console.log("WebHook set. Bot is live on Heroku")
 } else {
     bot = new TelegramBot(token, {polling: true})
     console.log("Bot is live on Local")
 }
+
+
 
 // BOT COMMANDS
 // Command: /start
@@ -61,9 +62,10 @@ bot.onText(/\/drug/, async (msg) => {
                 ]
             }
         }
-        await bot.sendMessage(msg.chat.id, "How would you like to search for the drug?", config)
+        bot.sendMessage(msg.chat.id, "How would you like to search for the drug?", config)
         // Bot actions based on query type selection by user
         bot.on('callback_query', async (callback) => {
+            console.log(callback)
             bot.removeListener("callback_query")
             if (callback.data == "name") { 
                 searchTypeName()

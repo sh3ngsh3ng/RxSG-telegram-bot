@@ -109,6 +109,6 @@ async function startDrugSearch(msg) {
 }
 
 
-modules.exports = {
+module.exports = {
     startDrugSearch
 }

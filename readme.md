@@ -1,4 +1,8 @@
 # RxSG Telegram Bot
+
+## Things to do
+- Clean up bot code to work with heroku env
+
 ## Introduction
 RxSG Telegram Bot is a telegram bot that provides users with information on drugs.
 
@@ -16,7 +20,6 @@ User's application -> Telegram's Bot API -> AWS Lambda -> Heroku
 2) Display information on Therapeutic Product
     - Basic Drug Information (product name, active ingredient, classification, etc)
     - Drug-Drug Information (WIP)
-
 
 ## Demo
 - Waiting for deployment

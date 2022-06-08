@@ -36,11 +36,14 @@ bot.onText(/\/start/, async (msg) => {
     bot.sendMessage(
         msg.chat.id,
         `
-        Hello ${msg.from.first_name}!\nI am RxSG! Your friendly <s>druglord</s> Rx Bot!\nI'm here to resolve your drug queries!\nBelow are some of my commands:
-        1) /start - start Bot
-        2) /end - stop Bot
-        3) /drug - search for a drug (in Singapore)\n
-        This project is still a work in progress. If you have any suggestions or wish to contribute, pls contact @ysh3ng,
+Hello ${msg.from.first_name}!
+I am RxSG! Your friendly <s>druglord</s> Rx Bot!
+I'm here to resolve your drug queries!
+Below are some of my commands:
+1) /start - start Bot
+2) /end - stop Bot
+3) /drug - search for a drug (in Singapore)
+This project is still a work in progress. If you have any suggestions or wish to contribute, pls contact me...
         `        
         , {parse_mode: 'HTML'})
 })

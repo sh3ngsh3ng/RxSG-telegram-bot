@@ -18,8 +18,6 @@ if (process.env.NODE_ENV === "Heroku") {
     console.log("Bot is live on Local")
 }
 
-
-
 // BOT COMMANDS
 // Command: /start
 bot.onText(/\/start/, async (msg) => {

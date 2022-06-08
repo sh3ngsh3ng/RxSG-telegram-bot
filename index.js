@@ -8,13 +8,20 @@ app.use(express.json())
 
 async function main() {
     app.get("/", (req,res) => {
-        console.log("called")
-        res.status(200)
-        res.send("Server is Live")
+        console.log("GET request made by aws lambda")
+        res.status(200).json({
+            message: "live"
+        })
+
     })
 
-    // webhook
-    // app.post(`/${process.env.API_KEY}`)
+    app.post(`/from-aws`, (req,res) => {
+        console.log("POST request made by aws lambda")
+        bot.processUpdate(req.body)
+        res.status(200).json({
+            message: "Bot received message"
+        })
+    })
 
 }
 

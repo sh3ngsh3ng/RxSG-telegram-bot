@@ -11,8 +11,7 @@ const token = process.env.API_KEY
 if (process.env.NODE_ENV === "Heroku") {
     bot = new TelegramBot(token)
     console.log(bot)
-    bot.setWebHook(process.env.HEROKU_URL + token)
-    // console.log(bot)
+    bot.setWebHook(process.env.AWS_LAMBDA_FUNCTION_URL)
     console.log("Bot is live on Heroku")
 } else {
     bot = new TelegramBot(token, {polling: true})
@@ -24,7 +23,7 @@ if (process.env.NODE_ENV === "Heroku") {
 // BOT COMMANDS
 // Command: /start
 bot.onText(/\/start/, async (msg) => {
-    console.log("Bot is called")
+    console.log(`Bot is called by ${msg.from.first_name}`)
     bot.sendMessage(
         msg.chat.id,
         `
@@ -53,6 +52,7 @@ bot.onText(/\/end/, (msg) => {
 
 // Command: /drug
 bot.onText(/\/drug/, async (msg) => {
+    console.log(`${msg.from.first_name} is currently searching for drugs`)
     // Function: ask user for search type and executes searchTypeName() OR searchTypeDosageForm()
     async function askForSearchType() {
         config = {

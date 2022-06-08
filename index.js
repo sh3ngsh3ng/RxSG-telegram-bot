@@ -173,10 +173,6 @@ bot.onText(/\/drug/, async (msg) => {
 
 
 
-
-
-
-
 async function main() {
     app.get("/", (req,res) => {
         console.log("GET request made by aws lambda")
@@ -188,7 +184,8 @@ async function main() {
 
     app.post(`/from-aws`, (req,res) => {
         console.log("POST request made by aws lambda")
-        console.log(req.body)
+        console.log("this is req =>", req)
+        console.log("this is req body => ", req.body)
         bot.processUpdate(req.body)
         res.status(200).json({
             message: "Bot received message"

@@ -22,9 +22,6 @@ if (process.env.NODE_ENV === "Heroku") {
 // 2) Error handling for no search results
 
 
-
-
-
 // BOT FUNCTIONS
 // Function: search for drugs by dosage forms
 async function searchTypeDosageForm(msg) {
@@ -56,53 +53,95 @@ async function searchTypeName(msg) {
                 drugName = msg.text
                 // results of the drugs that matches user's query
                 result = await searchUtils.searchDrug(drugName)
-                // display results as options for user to select
-                let options = result.map((drugObj, i) => {
-                    let productName = drugObj.product_name
-                    return [
-                        {
-                            "text": productName,
-                            "callback_data": i
-                        }
+
+
+                if (result.length == 0) {
+
+                    let options = [
+                        [{"text": "Search Again", "callback_data": "search"}],
+                        [{"text": "Change Search Type", "callback_data": "change"}]
                     ]
-                })
-    
-                // add extra option to return to search again
-                options.push([{"text": "Search Again", "callback_data": "search"}])
-                options.push([{"text": "Change Search Type", "callback_data": "change"}])
-    
-                // add all options as inline_keybuttons
-                let config = {
-                    reply_markup: {
-                        "inline_keyboard": options
-                    }
-                }
-                
-                bot.sendMessage(msg.chat.id, `Below are your search results for ${drugName.toUpperCase()}! Click for more information.`, config)
-                    .then(() => {
-                        // when option chosen, display information
+                    bot.sendMessage(msg.chat.id, "No results found", {
+                        reply_markup: {
+                            "inline_keyboard": options,
+                            "one_time_keyboard": true,
+                            "resize_keyboard": true
+                        }
+                        // reply_markup: {
+                        //     "keyboard": options,
+                        //     "one_time_keyboard": true,
+                        //     "resize_keyboard": true
+                        // }
+                    })
+                    .then((callback) => {
                         bot.once("callback_query", async (callback) => {
                             if (callback.data =="search") {
-                                searchTypeName()
+                                bot.editMessageReplyMarkup({
+                                    inline_keyboard: []
+                                }, {
+                                    "message_id": callback.message.message_id, 
+                                    "chat_id": callback.message.chat.id
+                                })
+                                searchTypeName(callback.message)
                             } else if (callback.data == "change") {
-                                askForSearchType()
-                            } else {
-                                // get drug obj from option chosen by user
-                                let drug = result[callback.data]
-                                // send user drug details
-                                bot.sendMessage(
-                                    msg.chat.id,
-                                    `
-                                    <b>Product Name</b>: ${drug.product_name}\n<b>Strength</b>: ${drug.strength}\n<b>Route of Administration</b>: ${drug.route_of_administration}\n<b>Classificaion</b>: ${drug.forensic_classification}\n<b>Dosage Form</b>: ${drug.dosage_form}\n
-                                    `,
-                                    {parse_mode: 'HTML'}
-                                )
+                                askForSearchType(callback.message)
                             }
-                            
                         })
                     })
-    
+                } else {
+                    // display results as options for user to select
 
+
+                    let options = result.map((drugObj, i) => {
+                        let productName = drugObj.product_name
+                        return [
+                            {
+                                "text": productName,
+                                "callback_data": i
+                            },
+                        ]
+                    })
+
+
+                    // add extra option to return to search again
+                    options.push([{"text": "Search Again", "callback_data": "search"}])
+                    options.push([{"text": "Change Search Type", "callback_data": "change"}])
+
+
+                    // add all options as inline_keybuttons
+                    let config = {
+                        reply_markup: {
+                            "inline_keyboard": options
+                        }
+                    }
+                    
+                    // reply user with results
+                    bot.sendMessage(msg.chat.id, `Below are your search results for ${drugName.toUpperCase()}! Click for more information.`, config)
+                        .then(() => {
+                            // when option chosen, display information
+                            bot.once("callback_query", async (callback) => {
+                                if (callback.data =="search") {
+                                    // console.log(msg.chat.id == callback.message.chat.id)
+                                    searchTypeName(msg)
+                                } else if (callback.data == "change") {
+                                    askForSearchType(msg)
+                                } else {
+                                    // get drug obj from option chosen by user
+                                    let drug = result[callback.data]
+                                    // send user drug details
+                                    bot.sendMessage(
+                                        msg.chat.id,
+                                        `
+                                        <b>Product Name</b>: ${drug.product_name}\n<b>Strength</b>: ${drug.strength}\n<b>Route of Administration</b>: ${drug.route_of_administration}\n<b>Classificaion</b>: ${drug.forensic_classification}\n<b>Dosage Form</b>: ${drug.dosage_form}\n
+                                        `,
+                                        {parse_mode: 'HTML'}
+                                    )
+                                }
+                                
+                            })
+                        })
+                    
+                }
             })
         })
 
@@ -116,8 +155,8 @@ async function startDrugSearch(msg) {
                 [{ text: 'Search by Name & Active Ingredient', callback_data: 'name' }],
                 [{ text: 'Search by Dosage Form', callback_data: 'form' }]
             ],
-            force_reply: true
-        }
+        },
+        force_reply: true
     }
     bot.sendMessage(msg.chat.id, "How would you like to search for the drug?", config)
         .then(() => {
@@ -135,23 +174,26 @@ async function startDrugSearch(msg) {
 
 
 
-
-
-
 // BOT COMMANDS
 // Command: /start
 bot.onText(/\/start/, async (msg) => {
     console.log(`Bot is called by ${msg.from.first_name}`)
+    console.log("Bot is currently on local server")
     bot.sendMessage(
         msg.chat.id,
         `
-Hello ${msg.from.first_name}!
+<b>PLEASE NOTE THAT BOT IS STILL CURRENTLY UNDER DEVELOPMENT</b>
+
+Hello <b>${msg.from.first_name}! </b>
+
 I am RxSG! Your friendly <s>druglord</s> Rx Bot!
 I'm here to resolve your drug queries!
+
 Below are some of my commands:
-1) /start - start Bot
-2) /end - stop Bot
-3) /drug - search for a drug (in Singapore)
+  1) /start - start Bot
+  2) /end - stop Bot
+  3) /drug - search for a drug (in Singapore)
+
 If you wish to contribute or have some suggestions, please feel free to contact me at....
         `        
         , {parse_mode: 'HTML'})

@@ -1,30 +1,21 @@
-const TelegramBot = require('node-telegram-bot-api')
-require('dotenv').config()
 let searchUtils = require('./searchFunctions')
 
-// initialize bot
-let bot;
-const token = process.env.API_KEY
 
-// Server is either on local or heroku
-if (process.env.NODE_ENV === "Heroku") {
-    bot = new TelegramBot(token)
-    bot.setWebHook(process.env.AWS_LAMBDA_FUNCTION_URL)
-    console.log("WebHook set. Bot is live on Heroku")
-} else {
-    bot = new TelegramBot(token, {polling: true})
-    console.log("Bot is live on Local")
+
+function deleteMarkup(bot, message_id, chat_id) {
+    bot.editMessageReplyMarkup({
+        inline_keyboard: []
+    }, {
+        "message_id": message_id, 
+        "chat_id": chat_id
+    })
 }
 
-
-// Things to do:
-// 1) Rewrite logic for searchTypeName function
-// 2) Error handling for no search results
 
 
 // BOT FUNCTIONS
 // Function: search for drugs by dosage forms
-async function searchTypeDosageForm(msg) {
+async function searchTypeDosageForm(bot, msg) {
     console.log("Search by dosage Form")
     // bot sends message that force user to reply to
     bot.sendMessage(msg.chat.id, "Please type in name of drug", {
@@ -43,9 +34,11 @@ async function searchTypeDosageForm(msg) {
 }
 
 // Function: search for drugs by name/active ingredients (rewrite function)
-async function searchTypeName(msg) {
+async function searchTypeName(bot, msg) {
     var result = []
     var drugName = ""
+    deleteMarkup(bot, msg.message_id, msg.chat.id)
+
     // Ask user for drug name
     bot.sendMessage(msg.chat.id, "Enter the name/active ingredient of the drug you want to search for!")
         .then(() => {
@@ -67,24 +60,13 @@ async function searchTypeName(msg) {
                             "one_time_keyboard": true,
                             "resize_keyboard": true
                         }
-                        // reply_markup: {
-                        //     "keyboard": options,
-                        //     "one_time_keyboard": true,
-                        //     "resize_keyboard": true
-                        // }
                     })
-                    .then((callback) => {
+                    .then(() => {
                         bot.once("callback_query", async (callback) => {
                             if (callback.data =="search") {
-                                bot.editMessageReplyMarkup({
-                                    inline_keyboard: []
-                                }, {
-                                    "message_id": callback.message.message_id, 
-                                    "chat_id": callback.message.chat.id
-                                })
-                                searchTypeName(callback.message)
+                                searchTypeName(bot, callback.message)
                             } else if (callback.data == "change") {
-                                askForSearchType(callback.message)
+                                // askForSearchType(bot, callback.message)
                             }
                         })
                     })
@@ -121,10 +103,11 @@ async function searchTypeName(msg) {
                             bot.once("callback_query", async (callback) => {
                                 if (callback.data =="search") {
                                     // console.log(msg.chat.id == callback.message.chat.id)
-                                    searchTypeName(msg)
+                                    searchTypeName(bot, callback.message)
                                 } else if (callback.data == "change") {
-                                    askForSearchType(msg)
+                                    askForSearchType(bot, callback.message)
                                 } else {
+                                    deleteMarkup(bot, callback.message.message_id, callback.message.chat.id)
                                     // get drug obj from option chosen by user
                                     let drug = result[callback.data]
                                     // send user drug details
@@ -147,7 +130,7 @@ async function searchTypeName(msg) {
 }
 
 // Function: entry function for user to choose how they want to search for drugs
-async function startDrugSearch(msg) {
+async function startDrugSearch(bot, msg) {
     config = {
         reply_markup: {
             "inline_keyboard": [
@@ -162,9 +145,9 @@ async function startDrugSearch(msg) {
             // wait for a callback query depending on what the user chose
             bot.once('callback_query', async (callback) => {
                 if (callback.data == "name") { 
-                    searchTypeName(msg)
+                    searchTypeName(bot, msg)
                 }  else if (callback.data == "form") {
-                    searchTypeDosageForm(msg)
+                    searchTypeDosageForm(bot, msg)
                 }
             })
         })
@@ -172,70 +155,8 @@ async function startDrugSearch(msg) {
 }
 
 
-
-// BOT COMMANDS
-// Command: /start
-bot.onText(/\/start/, async (msg) => {
-    console.log(`Bot is called by ${msg.from.first_name}`)
-    console.log("Bot is currently on local server")
-    bot.sendMessage(
-        msg.chat.id,
-        `
-<b>PLEASE NOTE THAT BOT IS STILL CURRENTLY UNDER DEVELOPMENT</b>
-local server
-Hello <b>${msg.from.first_name}! </b>
-
-I am RxSG! Your friendly <s>druglord</s> Rx Bot!
-I'm here to resolve your drug queries!
-
-Below are some of my commands:
-  1) /start - start Bot
-  2) /end - stop Bot
-  3) /drug - search for a drug (in Singapore)
-
-If you wish to contribute or have some suggestions, please feel free to contact me at....
-        `        
-        , {parse_mode: 'HTML'})
-})
-// Additional commands to add
-// 4) /druginfo - find info on drug*
-// 5) /pharmacy - search for a local pharmacy
-// 6) /feedback - submit a feedback\n*<b>Please note that the sources are from...</b>
-
-// Command: /end
-bot.onText(/\/end/, (msg) => {
-    bot.sendMessage(
-        msg.chat.id,
-        `
-        Goodbye ${msg.from.first_name}!\nStart me up when you need me again!
-        `        
-        , {parse_mode: 'HTML'})
-    // bot.stopPolling()
-})
-
-
-// Command: /drug
-bot.onText(/\/drug/, async (msg) => {
-    console.log(`${msg.from.first_name} is currently searching for drugs`)
-
-    // entry function for searching drugs
-    await startDrugSearch(msg)
-
-})
-
-
 module.exports = {
-    bot
+    searchTypeDosageForm,
+    searchTypeName,
+    startDrugSearch
 }
-
-
-
-
-
-
-
-
-
-
-
-

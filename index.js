@@ -1,6 +1,6 @@
 const express = require("express")
 
-const { bot } = require("./bot2")
+const { bot } = require("./bot3")
 require("dotenv").config()
 
 let app = express()
@@ -23,7 +23,12 @@ async function main() {
     app.post(`/from-aws`, (req,res) => {
         console.log("POST request made by aws lambda")
         console.log("this is req body => ", req.body)
-        bot.processUpdate(req.body)
+        try {
+            bot.processUpdate(req.body)
+        } catch (err) {
+            bot.sendMessage(req.body.msg.chat.id, "Something went wrong")
+        }
+        
         res.status(200).json({
             message: "Bot received message"
         })

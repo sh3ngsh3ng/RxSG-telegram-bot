@@ -19,6 +19,7 @@ async function main() {
 
     })
     
+    
     // Route: Called by AWS lambda
     app.post(`/from-aws`, (req,res) => {
         console.log("POST request made by aws lambda")

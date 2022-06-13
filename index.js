@@ -19,7 +19,7 @@ async function main() {
 
     })
     
-    
+
     // Route: Called by AWS lambda
     app.post(`/from-aws`, (req,res) => {
         console.log("POST request made by aws lambda")
@@ -27,7 +27,8 @@ async function main() {
         try {
             bot.processUpdate(req.body)
         } catch (err) {
-            bot.sendMessage(req.body.msg.chat.id, "Something went wrong")
+            console.log(err)
+            // bot.sendMessage(req.body.msg.chat.id, "Something went wrong")
         }
         
         res.status(200).json({

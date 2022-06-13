@@ -113,4 +113,6 @@ bot.onText(/\/drug/, async (msg) => {
 
 
 
-
+module.exports = {
+    bot
+}

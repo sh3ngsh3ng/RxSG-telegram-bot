@@ -49,7 +49,7 @@ async function searchPharmacyByNameAndLocation(bot, msg) {
         })
 }
 
-
+// list rendering of drug search results
 async function displaySearchResultsForDrugs(bot, msg, userInput, result) {
 
     let options = result.map((drugObj, i) => {
@@ -70,6 +70,7 @@ async function displaySearchResultsForDrugs(bot, msg, userInput, result) {
     await bot.sendMessage(msg.chat.id, `Below are your search results for ${userInput.toUpperCase()}!`, config)
 }
 
+// list rendering of pharmacy search results
 async function displaySearchResultsForPharmacy(bot, msg, userInput, result) {
 
     let options = result.map((pharmObj, i) => {
@@ -90,7 +91,7 @@ async function displaySearchResultsForPharmacy(bot, msg, userInput, result) {
     await bot.sendMessage(msg.chat.id, `Below are your search results for ${userInput.toUpperCase()}!`, config)
 }
 
-
+// displaying mroe info on drug result on selection
 async function displayDrugInformation(bot, result) {
         bot.on("callback_query", async (callback) => {
             let drug = result[callback.data]
@@ -109,6 +110,7 @@ async function displayDrugInformation(bot, result) {
         })
 }
 
+// displaying more info on pharmacy result on selection
 async function displayPharmacyInformation(bot, result) {
     bot.on("callback_query", async (callback) => {
         let pharmacy = result[callback.data]

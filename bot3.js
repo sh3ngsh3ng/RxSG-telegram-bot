@@ -102,6 +102,8 @@ bot.onText(/\/drug/, async (msg) => {
 
 // Command: /pharmacy
 bot.onText(/\/pharmacy/, async(msg) => {
+    bot.removeListener("callback_query")
+    bot.removeListener("message")
     console.log(`${msg.from.first_name} is currently searching for pharmacy`)
     let config = {
         reply_markup: {

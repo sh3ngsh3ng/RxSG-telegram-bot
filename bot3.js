@@ -43,7 +43,7 @@ Below are some of my commands:
   2) /end - stop Bot
   3) /drug - search for a drug (in Singapore)
 
-If you wish to contribute or have some suggestions, please feel free to contact me at @ysh3ng
+If you wish to contribute or have some suggestions, please feel free to contact me at....
         `        
         , {parse_mode: 'HTML'})
 })
@@ -95,6 +95,30 @@ bot.onText(/\/drug/, async (msg) => {
                 // else if (callback.data == "form") {
                 //     // botFunctions.searchTypeDosageForm(bot, callback.message)
                 // }
+            })
+        })
+})
+
+
+// Command: /pharmacy
+bot.onText(/\/pharmacy/, async(msg) => {
+    console.log(`${msg.from.first_name} is currently searching for pharmacy`)
+    let config = {
+        reply_markup: {
+            "inline_keyboard": [
+                [{ text: 'Search by Name & Location', callback_data: 'name' }],
+                [{ text: 'Search by Postal Code', callback_data: 'postal' }],
+                [{ text: 'Search by Category', callback_data: 'category' }]
+            ]
+        },
+        force_reply: true
+    }
+    bot.sendMessage(msg.chat.id, "How would you like to search for a pharmacy? Select an option below.", config)
+        .then(() => {
+            bot.once("callback_query", async (callback) => {
+                if (callback.data == "name") {
+                    botFunctions.searchPharmacyByNameAndLocation(bot, callback.message)
+                }
             })
         })
 })

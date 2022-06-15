@@ -1,0 +1,269 @@
+Guardian Pharmacy (Chinatown Point 4)
+Guardian Pharmacy (City Link)
+Guardian Pharmacy (City Square Mall)
+Guardian Pharmacy (Clementi Mall)
+Guardian Pharmacy (Clifford Centre 2)
+Guardian Pharmacy (Compass One)
+Guardian Pharmacy (Departure Transit Lounge East)
+Guardian Pharmacy (Departure Transit West T1)
+Guardian Pharmacy (Departure/Check In Hall North)
+Guardian Pharmacy (Departure/Transit Lounge North Terminal 2)
+Guardian Pharmacy (Departure/Transit Lounge South)
+Guardian Pharmacy (Gleneagles)
+Guardian Pharmacy (Great World City)
+Guardian Pharmacy (H205)
+Guardian Pharmacy (Harbourfront Centre)
+Guardian Pharmacy (Holland Shopping Centre)
+Guardian Pharmacy (Hougang Mall)
+Guardian Pharmacy (IMM2)
+Guardian Pharmacy (ION)
+Guardian Pharmacy (JEM)
+Guardian Pharmacy (Jelita)
+Guardian Pharmacy (Jurong Point 2)
+Guardian Pharmacy (Jurong West Blk 503)
+Guardian Pharmacy (Kallang Leisure Park 2)
+Guardian Pharmacy (Katong Mall)
+Guardian Pharmacy (LOT 1)
+Guardian Pharmacy (Lavender MRT Station)
+Guardian Pharmacy (Marina Bay Sands)
+Guardian Pharmacy (Mount Elizabeth)
+Guardian Pharmacy (Pagoda Street)
+Guardian Pharmacy (Paragon)
+Guardian Pharmacy (Parkway Parade)
+Guardian Pharmacy (Plaza Singapura)
+Guardian Pharmacy (Raffles City)
+Guardian Pharmacy (Raffles Place MRT 3)
+Guardian Pharmacy (Seletar Mall)
+Guardian Pharmacy (Serangoon Garden)
+Guardian Pharmacy (Serangoon NEX)
+Guardian Pharmacy (Star Vista)
+Guardian Pharmacy (Sun Plaza 2)
+Guardian Pharmacy (Suntec City)
+Guardian Pharmacy (Tai Seng Street)
+Guardian Pharmacy (Takashimaya S. C. )
+Guardian Pharmacy (Tampines MRT)
+Guardian Pharmacy (Tampines Mall)
+Guardian Pharmacy (Tanglin Mall)
+Guardian Pharmacy (The Centrepoint)
+Guardian Pharmacy (Thomson Plaza 2)
+Guardian Pharmacy (Tiong Bahru Plaza)
+Guardian Pharmacy (Toa Payoh Blk 190)
+Guardian Pharmacy (United Square 2)
+Guardian Pharmacy (Vivo City)
+Guardian Pharmacy (WRS)
+Guardian Pharmacy (West Mall)
+Guardian Pharmacy (Westgate)
+Guardian Pharmacy (Yew Tee MRT)
+Guardian Pharmacy (Zhongsan Park)
+Healing Hub @ Ang Mo Kio - Thye Hua Kwan Hospital
+Johns Hopkins Singapore International Medical Centre Pte Ltd
+Jurong Community Hospital Pharmacy
+Jurong Medical Centre Pharmacy
+KK Emergency Pharmacy
+KK Outpatient Pharmacy
+Khoo Teck Puat Hospital Pharmacy
+MANAPHARMA
+MEDI-LINK PHARMACY
+MOHAMED MUSTAFA & SAMSUDDIN CO PTE LTD (MUSTAFA CENTRE)
+MOUNT ELIZABETH NOVENA HOSPITAL PHARMACY
+MT ALVERNIA HOSPITAL RETAIL PHARMACY
+Mount Alvernia Hospital (Main Pharmacy)
+Mount Elizabeth Hospital
+NATIONAL CANCER CENTRE PHARMACY (LEVEL 1)
+NATIONAL CANCER CENTRE PHARMACY (LEVEL 3)
+NATIONAL SKIN CENTRE (S) PTE LTD (PHARMACY)
+NATIONAL UNIVERSITY HOSPITAL (S) PTE LTD (RETAIL PHARMACY)
+NATIONAL UNIVERSITY HOSPITAL(S) PTE LTD (MEDICAL CENTRE PHARMACY)
+NHG Pharmacy (CCK Polyclinic)
+NHG Pharmacy (Yishun)
+NTUC Healthcare (BTP)
+NTUC Healthcare - The Living Pharmacy (TSP)
+National Addiction Management Services (NAMS) Clinic Pharmacy
+National Healthcare Group Pharmacy (Ang Mo Kio)
+National Healthcare Group Pharmacy (Ang Mo Kio)
+National Healthcare Group Pharmacy (Bukit Batok)
+National Healthcare Group Pharmacy (Clementi)
+National Healthcare Group Pharmacy (Geylang)
+National Healthcare Group Pharmacy (Hougang)
+National Healthcare Group Pharmacy (Jurong)
+National Healthcare Group Pharmacy (Pioneer)
+National Healthcare Group Pharmacy (Queenstown)
+National Healthcare Group Pharmacy (Toa Payoh)
+National Healthcare Group Pharmacy (Woodlands)
+National Healthcare Group Pharmacy (Yishun)
+National Heart Centre Singapore
+National University Hosital - Kent Ridge Wing Pharmacy
+National University Hospital (s) Pte Ltd (Pharmacy @ NCIS)
+Ng Teng Fong General Hospital Outpatient & Retail Pharmacy
+Nishino Pharmacy (Shaw House)
+Nishino Pharmacy (Takashimaya)
+P & L Pharmacy Pte Ltd
+PARKWAY EAST HOSPITAL PHARMACY
+PHARMACY @ CGH MEDICAL CENTRE
+Pacific Pharmacy Pte Ltd
+Pharmacy A  Changi General Hospital
+Pharmacy Services Centre  NHG (Blk 9)
+Pharmacy@IB  CGH (The Integrated Building)
+Princeton Pharmacy (S) Pte Ltd
+R & D PHARMACEUTICAL PTE LTD
+Raffles Health Holland V
+SGH Retail Pharmacy (Blk 4)
+SINGAPORE NATIONAL EYE CENTRE PTE LTD
+SINGHEALTH POLY-OUTRAM
+SMITH PHARMACY PTE LTD
+ST ANDREW'S COMMUNITY HOSPITAL PHARMACY
+ST LUKE'S HOSPITAL BLOCK A
+SUMANG FAMILY PHARMACY
+Sengkang Pharmacy (Main Building Blk1)
+Singapore General Hospital Pharmacy
+Singhealth Poly - Bedok
+Singhealth Poly - Bukit Merah
+A.M. Pharmacy Pte Ltd
+ALPS PHARMACY
+Admiralty Medical Centre Pharmacy
+Airport Pharmacy
+Alchemy Pharmacy
+Amber Compounding Pharmacy Pte Ltd
+CGH Pharmacy B
+Child Guidance Clinic  Health Promotion Board
+Clinic B Pharmacy
+E+MED PTE LTD
+E+MED Pte Ltd
+Essentials Pharmacy
+Farrer Park Pharmacy
+GLENEAGLES HOSPITAL
+GRACE HEALTHCARE
+Guardian Pharmacy ( Waterway Point)
+Guardian Pharmacy (313 @ Somerset)
+Guardian Pharmacy (Admiralty)
+Guardian Pharmacy (Amara Hotel)
+Guardian Pharmacy (Ang Mo Kio 3)
+Guardian Pharmacy (Bedok Central)
+Guardian Pharmacy (Bedok Mall)
+Guardian Pharmacy (Bishan Place)
+Guardian Pharmacy (Bugis Junction 3)
+Guardian Pharmacy (Bugis MRT)
+Guardian Pharmacy (Bukit Panjang Plaza)
+Guardian Pharmacy (Causeway Point)
+Guardian Pharmacy (Changi T3 Basement 2 North)
+Guardian Pharmacy (Northpoint)
+Guardian Pharmacy (Novena Hospital)
+Guardian Pharmacy (Novena Square)
+Guardian Pharmacy (Our Tampines Hub)
+Singhealth Poly - Marine Parade
+Singhealth Poly - Pasir Ris
+Singhealth Poly - Punggol
+Singhealth Poly - Sengkang
+Singhealth Poly - Tampines
+Specialist Compounding Pharmacy Pte Ltd
+TAN TOCK SENG HOSPITAL PTE LTD (EMERGENCY PHARMACY)
+THE DENTAL PHARM
+TTSH (CDC Pharmacy - Blk 810 Moulmein Road)
+Tan Tock Seng Hospital (Outpatient & Retail Pharmacy)
+Tan Tock Seng Hospital (Pharmacy  Level 2)
+The Dental Pharm
+The Japanese Association Clinic  Singapore
+Thomson Medical Centre
+UNITY (HBF)
+UNITY (HLC)
+UNITY (JEM)
+UNITY (PSG)
+UNITY (TBR) Tiong Bahru Plaza
+UNITY (TPO)
+UNITY (YTP)
+UNITY By FairPrice (BN(A))
+UNITY By FairPrice (EPT)
+UNITY By FairPrice (HAMK)
+UNITY By FairPrice (HGLS)
+UNITY By FairPrice (HGPT)
+UNITY By FairPrice (HNEX)
+UNITY By FairPrice (JPT)
+UNITY By FairPrice (LOT1)
+UNITY By FairPrice (MP)
+UNITY By FairPrice (OKM)
+UNITY By FairPrice (PGOL)
+UNITY By FairPrice (PGWW)
+UNITY By FairPrice (PSG)
+UNITY By FairPrice (RVAL)
+UNITY By FairPrice (SPO)
+UNITY By FairPrice (TAML)
+UNITY By FairPrice (TBRU)
+UNITY By FairPrice (TGP)
+UNITY By FairPrice (THDB)
+UNITY By FairPrice (THPZ)
+UNITY By FairPrice (TMA)
+UNITY By FairPrice (TPO)
+UNITY By FairPrice (UARC)
+UNITY By FairPrice (UBMC)
+UNITY By FairPrice (UBPP)
+UNITY By FairPrice (UBTPZ)
+UNITY By FairPrice (UGWC)
+UNITY By FairPrice (UHBF)
+UNITY By FairPrice (UHJPT )Hyper Jurong Point
+UNITY By FairPrice (UHLM)
+UNITY By FairPrice (UJEM)
+UNITY By FairPrice (UJX8)
+UNITY By FairPrice (UNPCT) North Point City
+UNITY By FairPrice (USMA)
+UNITY By FairPrice (UYSH)
+UNITY By FairPrice (WGA)
+UNITY By Fairprice (CIA3)
+UNITY By Fairprice (CLML)
+UNITY By Fairprice (YTP)
+UNITY Waterway Point (WWP)
+Unity (HLM) Hillion Mall
+Unity By FairPrice (HSPH) Sports Hub
+UrbanRx Compounding Pharmacy Pte Ltd
+VERTEX PHARMACY PTE. LTD.
+Vivahealth Pharmacy
+WATSON'S PERSONAL CARE STORES PTE LTD (WATERWAY POINT)
+WATSONS PERSONAL CARE STORES (TIONG BAHRU PLAZA)
+WESTMEAD PHARMACY PTE LTD
+WOODS PHARMACY PTE LTD
+Watson's Personal Care Store Pte Ltd (Lucky Plaza)
+Watson's Personal Care Stores Pte Ltd (Bedok Central)
+Watson's Personal Care Stores Pte Ltd (Bedok Mall)
+Watson's Personal Care Stores Pte Ltd (Bugis Junction)
+Watson's Personal Care Stores Pte Ltd (Bukit Panjang Plaza)
+Watson's Personal Care Stores Pte Ltd (Causeway Point)
+Watson's Personal Care Stores Pte Ltd (Changi Airport T3 Basement)
+Watson's Personal Care Stores Pte Ltd (Changi Airport T3 Check in Hall)
+Watson's Personal Care Stores Pte Ltd (Changi Airport T4 Check in Hall)
+Watson's Personal Care Stores Pte Ltd (Changi Airport Terminal 3 Transit North)
+Watson's Personal Care Stores Pte Ltd (Changi Airport Terminal 3 Transit)
+Watson's Personal Care Stores Pte Ltd (Clementi Mall)
+Watson's Personal Care Stores Pte Ltd (Compass One)
+Watson's Personal Care Stores Pte Ltd (Great World City)
+Watson's Personal Care Stores Pte Ltd (Heartbeat@bedok)
+Watson's Personal Care Stores Pte Ltd (Hougang Mall)
+Watson's Personal Care Stores Pte Ltd (IMM)
+Watson's Personal Care Stores Pte Ltd (International Plaza)
+Watson's Personal Care Stores Pte Ltd (Jem)
+Watson's Personal Care Stores Pte Ltd (Junction 8)
+Watson's Personal Care Stores Pte Ltd (Jurong Point)
+Watson's Personal Care Stores Pte Ltd (Marina Bay Financial Centre)
+Watson's Personal Care Stores Pte Ltd (Marina Square)
+Watson's Personal Care Stores Pte Ltd (NEX)
+Watson's Personal Care Stores Pte Ltd (Ngee Ann City)
+Watson's Personal Care Stores Pte Ltd (North Point)
+Watson's Personal Care Stores Pte Ltd (Novena Square)
+Watson's Personal Care Stores Pte Ltd (One@Kentridge)
+Watson's Personal Care Stores Pte Ltd (Paragon)
+Watson's Personal Care Stores Pte Ltd (Parkway Parade)
+Watson's Personal Care Stores Pte Ltd (Raffles City)
+Watson's Personal Care Stores Pte Ltd (Resort World Sentosa)
+Watson's Personal Care Stores Pte Ltd (Royal Square)
+Watson's Personal Care Stores Pte Ltd (Tampines Mall)
+Watson's Personal Care Stores Pte Ltd (Toa Payoh HDB Hub)
+Watson's Personal Care Stores Pte Ltd (United Square)
+Watson's Personal Care Stores Pte Ltd (Vivo City)
+Watson's Personal Care Stores Pte Ltd (West Mall)
+Watson's Personal Care Stores Pte Ltd Ion Orchard
+Welcia-BHG Bugis Junction
+Welcia-BHG Northpoint City
+West Point Hospital Pharmacy
+CONCORD HEALTHCARE RETAIL PHARMACY
+Guardian Pharmacy (White Sands Mall)
+MUSTAFA PHARMACY
+Guardian Pharmacy (International Building)
+UNITY By FairPrice (UWSA)
